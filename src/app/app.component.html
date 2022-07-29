@@ -1,5 +1,13 @@
-<p>hello world</p>
-<a routerLink="/">home</a>
-<br>
-<a routerLink="/contact">home</a>
-<router-outlet></router-outlet>
+<h2>news by me angular</h2>
+<table border="1" width="100%" cellspacing="0" cellpadding="0" cellpaddingbottom>
+	<thead>
+		<th>title</th>
+		<th>content</th>
+		<th>readmore</th>
+	</thead>
+	<tbody   *ngFor="let e of apidata">
+		<td>{{e.title | slice:0:80}}</td>
+		<td>{{e.content | slice:0:120}}...</td>
+		<td><a href="{{e.readMoreUrl}}">read More</a></td>
+	</tbody>
+</table>
